@@ -47,24 +47,24 @@ GearMenus goal is to help the player switching between items on certain slots. O
 ### Item switch for certain slots
 With GearMenu it is easy to switch between items in supported slots. This is especially useful for engineering items that you wear for a certain amount of time and then switch back to your usual gear.
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_switch_items.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_switch_items.gif)
 
 ### CombatQueue
 Certain items cannot be switched while the player is in combat. Weapons will be switched immediately whether the player is in combat or not. Other items that cannot be switched in combat will be enqueued in the combatqueue and switched as soon as possible. This is especially useful in PvP when you leave combat for a short time.
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_combat_queue.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_combat_queue.gif)
 
 **Note:** You can right click any slot to clear the combatqueue for that slot
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_combat_queue_cancel.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_combat_queue_cancel.gif)
 
 GearMenu also detects whether an itemswitch is possible even when out of combat. If you're switching an item while you're casting your mount or any other spell it will put the item in the combatqueue. As soon as the cast is over the item will be switched.
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_combat_queue_cast.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_combat_queue_cast.gif)
 
 This is also the case if you cancel your cast.
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_combat_queue_cast_cancel.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_combat_queue_cast_cancel.gif)
 
 ### Quick Change
 
@@ -72,13 +72,13 @@ Quick change consists of rules that apply when certain items are used. The playe
 
 **Note:** If an item has a buff effect and you immediately change the item you will usually also lose its buff. In most cases it makes sense to set the delay to the duration of the buff
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_quick_change_add_rule.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_quick_change_add_rule.gif)
 
 ### Keybinding
 
 GearMenu allows to keybind to every slot with a keybinding. Instead of having a keybind for every item that you have to remember you set it directly on the slot itself.
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_keybinding.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_keybinding.gif)
 
 ### Drag and drop support
 
@@ -86,27 +86,27 @@ GearMenu allows to drag and drop items onto slots, remove from slots and slots c
 
 #### Drag and drop between slots
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_drag_and_drop_slots.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_drag_and_drop_slots.gif)
 
 #### Drag and drop item to GearMenu
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_drag_and_drop_equip.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_drag_and_drop_equip.gif)
 
 #### Unequip item by drag and drop
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_drag_and_drop_unequip.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_drag_and_drop_unequip.gif)
 
 ### Combined Equipping
 
 Slots such as trinket and ring slots have combined equipping enabled. This means that in addition to a left click on the item the player wishes to equip they also support right click. Slots that do not support combined quipping (which most don't) will normally equip any item whether it was left- or right-clicked. If the slot has combined equipping enabled a right click will instead put the chosen item into the opposite slot.
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_combined_equip.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_combined_equip.gif)
 
 ### Unequip Items
 
 Enable an empty slot in the changeMenu that allows for quicker and easier unequipping of items.
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_unequip.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_unequip.gif)
 
 ### Macro Support
 
@@ -130,7 +130,7 @@ Finding the id of a certain item is easiest with websites such as [wowhead](http
 
 For finding the correct slotId refer to the image below. Only InventorySlotIds are valid targets for GearMenu
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_interface_slots.png)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_interface_slots.png)
 
 ## Configurability
 
@@ -142,13 +142,13 @@ To show the configuration screen use `/rggm opt` while ingame and `/rggm info` f
 
 With the latest release it is possible to create multiple GearBars that can act independently of eachother.
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_create_gearbar.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_create_gearbar.gif)
 
 ### Configure a GearBar
 
 Each GearBar has some configurations that can be done individually for each GearBar. This includes various sizes of the GearBar, its locked or unlocked state and what GearSlots are configured for the GearBar.
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_configure_gearslots.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_configure_gearslots.gif)
 
 ### Individual GearBar Configuration
 
@@ -156,31 +156,31 @@ Each GearBar has some configurations that can be done individually for each Gear
 
 Whether cooldowns should be shown or hidden can be configured individually for each GearBar.
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_options_cooldowns.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_options_cooldowns.gif)
 
 ### Hide/Show Keybindings
 
 Whether keybindings should be shown or hidden can be configured individually for each GearBar.
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_options_keybindings.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_options_keybindings.gif)
 
 ### Lock/Unlock Window
 
 Whether a GearBar should be freely movable or be locked in place can be configured individually for each GearBar.
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_options_lock_window.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_options_lock_window.gif)
 
 #### GearSlot Size
 
 Every GearBar can have a different size for its GearSlots. You could for an example have a GearBar with very big trinkets and another with smaller slots for less important items.
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_options_gearslot_size.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_options_gearslot_size.gif)
 
 #### ChangeMenu Size
 
 The size of the ChangeMenu can be configured individual from the GearSlot size.
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_options_changemenu_size.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_options_changemenu_size.gif)
 
 ### General Configuration
 
@@ -192,7 +192,7 @@ Enable whether an item in a Gearslot should be used when the player pressed down
 
 Not interested to see items with a quality level below a certain level? Filter them out and only items that meet your set level will be considered to be displayed in GearMenu.
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/docs/gm_options_filter_item_quality.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_options_filter_item_quality.gif)
 
 ## FAQ
 
