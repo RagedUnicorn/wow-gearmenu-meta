@@ -1,7 +1,7 @@
 
 # GearMenu
 &nbsp;  
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-classic-meta/master/assets/ragedunicorn_love_classic_and_tbc.png)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/ragedunicorn_love_classic_and_tbc.png)
 &nbsp;  
 _GearMenu aims to help the player switching between items in and out of combat. When the player is in combat a combatqueue will take care of switching the item as soon as possible. It also allows you to define switching rules and keybinding slots._
 
