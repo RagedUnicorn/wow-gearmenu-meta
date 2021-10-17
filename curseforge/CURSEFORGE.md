@@ -107,6 +107,13 @@ Enable an empty slot in the changeMenu that allows for quicker and easier unequi
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_unequip.gif)
 
+### TrinketMenu
+
+TrinketMenu allows the player to have all available trinkets and their status in view at all times. This makes it easier for the player to plan when to equip a trinket with a long cooldown. A left click will equip the trinket into the upper trinketslot and a right click will equip the item into the lower trinketslot.
+
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_trinketmenu_demo.gif)
+
+
 ### Macro Support
 
 If you prefer having certain items in your actionslots GearMenu can still be of use. By using the macro-bridge you get all the advantages of the combatQueue in a normal macro.
@@ -192,6 +199,17 @@ Enable whether an item in a Gearslot should be used when the player pressed down
 Not interested to see items with a quality level below a certain level? Filter them out and only items that meet your set level will be considered to be displayed in GearMenu.
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_options_filter_item_quality.gif)
+
+### TrinketMenu Configuration
+
+TrinketMenu supports the following configuration features.
+
+- Enabling/Disabling TrinketMenu completely
+- Lock/Unlock the TrinketMenu
+- Show or Hide trinket cooldowns
+- Adapt size of the TrinketMenu
+
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_trinketmenu_configuration.gif)
 
 ## FAQ
 
