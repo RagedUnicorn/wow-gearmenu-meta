@@ -4,6 +4,11 @@
 &nbsp;  
 _GearMenu aims to help the player switching between items in and out of combat. When the player is in combat a combatqueue will take care of switching the item as soon as possible. It also allows you to define switching rules and keybinding slots._
 
+## Providers
+
+[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/curseforge.svg)](https://www.curseforge.com/wow/addons/gearmenu)
+[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/wago.svg)](https://addons.wago.io/addons/gearmenu)
+
 ## What is GearMenu?
 
 GearMenus goal is to help the player switching between items on certain slots. Often players have items such as engineering items that have a one time use followed by a long cooldown. After using them during a fight the player wants to switch back to a more useful item. While changing items during combat is not possible (with some exceptions such as weapons) GearMenu can help with switching them as soon as possible. When a player tries to switch an item during combat it will be put into the combatqueue and switched as soon as possible. If the player leaves combat for just a split second all the items in the combatqueue will be switched. For some classes this might be even easier because they can use spells such as rogue - vanish or hunter - feign death.
@@ -67,9 +72,9 @@ This is also the case if you cancel your cast.
 
 ### Quick Change
 
-Quick change consists of rules that apply when certain items are used. The player can define rules for items that have a usable effect. An item might be immediately switched after use or only after a certain delay. Otherwise the same rules for item switching apply. This means that if the user is in combat it will be moved to the combat queue and if he is out of combat the item will be immediately switched. See the optionsmenu for defining new rules based on the item type.
+Quick change consists of rules that apply when certain items are used. The player can define rules for items that have a usable effect. An item might be immediately switched after use or only after a certain delay. Otherwise, the same rules for item switching apply. This means that if the user is in combat it will be moved to the combat queue and if he is out of combat the item will be immediately switched. See the optionsmenu for defining new rules based on the item type.
 
-**Note:** If an item has a buff effect and you immediately change the item you will usually also lose its buff. In most cases it makes sense to set the delay to the duration of the buff
+**Note:** If an item has a buff effect, and you immediately change the item you will usually also lose its buff. In most cases it makes sense to set the delay to the duration of the buff
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_quick_change_add_rule.gif)
 
@@ -122,7 +127,7 @@ If you prefer having certain items in your actionslots GearMenu can still be of 
 
 `/run GM_AddToCombatQueue(itemId, slotId)`
 
-**Note:** It is not recommended to use this for weapons because addons cannot switch weapons during combat (GearMenu will put the item into the combatQueue). With a normal weaponswitch macro however this is still possible.
+**Note:** It is not recommended using this for weapons because addons cannot switch weapons during combat (GearMenu will put the item into the combatQueue). With a normal weaponswitch macro however this is still possible.
 
 #### Clear Slot From CombatQueue
 
@@ -202,7 +207,7 @@ Not interested to see items with a quality level below a certain level? Filter t
 
 #### Themes
 
-GearMenu supports two different themes for its ui elements. By default the custom theme will be used.
+GearMenu supports two different themes for its ui elements. By default, the custom theme will be used.
 
 ##### Custom
 
@@ -225,13 +230,11 @@ TrinketMenu supports the following configuration features.
 
 ## FAQ
 
-#### The Addon is not showing up in WoW. What can I do?
-
-Make sure to recheck the installation part of this Readme and check that the Addon is placed inside `[WoW-installation-directory]\Interface\AddOns` and is correctly named as `GearMenu`.
+## FAQ
 
 #### I get a red error (Lua Error) on my screen. What is this?
 
-This is what we call a Lua error and it usually happens because of an oversight or error by the developer (in this case me). Take a screenshot off the error and create a Github Issue with it and I will see if I can resolve it. It also helps if you can add any additional information of what you we're doing at the time and what other addons you have active. Also if you are able to reproduce the error make sure to check if it still happens if you disable all others addons.
+This is what we call a Lua error, and it usually happens because of an oversight or error by the developer (in this case me). Take a screenshot off the error and create a GitHub Issue with it, and I will see if I can resolve it. It also helps if you can add any additional information of what you were doing at the time and what other addons you have active. Additionally, if you are able to reproduce the error make sure to check if it still happens if you disable all others addons.
 
 #### A certain item is not showing up when I hover a slot. Why is that?
 
@@ -241,13 +244,13 @@ GearMenu filters by default, items that are below common (green) quality. This c
 
 There are certain limitations that make it harder to switch an item even if the player is out of combat. One such example is that WoW prevents switching items while the player is casting a spell. GearMenu detects this and changes the item as soon as there is a pause between two spells or if a spell was cancelled. Just keep this in mind if you absolutely need the item switch to happen as soon as possible. Another factor can be a loss of control effect such as sap, iceblock and similar effects. In such circumstances it is not possible to switch an item. GearMenu is aware of such effects on the player and will switch the item as soon as possible.
 
-If you still think you found an issue where GearMenu doesn't switch items as expected feel free to create an issue in the respective repository.
+If you still think you found an issue where GearMenu doesn't switch items as expected feel free to create an [issue](https://github.com/RagedUnicorn/wow-bcc-gearmenu/issues).
 
 #### Why can't I switch Weapons during Combat?
 
-This is a limitation that Blizzard puts on addons. It is not currently possible to switch to an arbitrary weapon while in combat. It is however possible to create weaponswitch macros because it is already known from which weapon to what weapon the player wants to switch. While it is not ideal, to workaround this issue GearMenu puts weapons in the CombatQueue if a weaponswitch is done while the player is in combat. If he is not in combat the switch will happen immediately. This might be improved in a future release if there is a better workaround possible.
+This is a limitation that Blizzard puts on addons. It is not currently possible to switch to an arbitrary weapon while in combat. It is however possible to create weaponswitch macros because it is already known from which weapon to what weapon the player wants to switch. While it is not ideal, to work around this issue GearMenu puts weapons in the CombatQueue if a weaponswitch is done while the player is in combat. If he is not in combat the switch will happen immediately. This might be improved in a future release if there is a better workaround possible.
 
-**Note:** It is also possible to switch a weapon by drag an dropping the weapon in the standard Blizzard interfaces. This however is in no way connected to GearMenu
+> Note: It is also possible to switch a weapon by dragging and dropping the weapon in the standard Blizzard interfaces. This however is in no way connected to GearMenu
 
 #### Why can't I create an Itemset?
 
