@@ -48,7 +48,7 @@ GearMenus goal is to help the player switching between items on certain slots. O
 
 [![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/source_bcc.svg)](https://github.com/RagedUnicorn/wow-bcc-gearmenu) **Burning Crusade Classic**
 
-[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/source_wotlkc.svg)](https://github.com/RagedUnicorn/wow-wotlkc-gearmenu) **Burning Crusade Classic**
+[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/source_wotlkc.svg)](https://github.com/RagedUnicorn/wow-wotlkc-gearmenu) **Wrath of The Lich King Classic**
 
 ## Features of GearMenu
 
