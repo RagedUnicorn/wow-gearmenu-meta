@@ -242,7 +242,8 @@ GearMenu filters by default, items that are below common (green) quality. This c
 
 There are certain limitations that make it harder to switch an item even if the player is out of combat. One such example is that WoW prevents switching items while the player is casting a spell. GearMenu detects this and changes the item as soon as there is a pause between two spells or if a spell was cancelled. Just keep this in mind if you absolutely need the item switch to happen as soon as possible. Another factor can be a loss of control effect such as sap, iceblock and similar effects. In such circumstances it is not possible to switch an item. GearMenu is aware of such effects on the player and will switch the item as soon as possible.
 
-If you still think you found an issue where GearMenu doesn't switch items as expected feel free to create an [issue](https://github.com/RagedUnicorn/wow-bcc-gearmenu/issues).
+If you still think you found an issue where GearMenu doesn't switch items as expected feel free to create an [issue](#Issues).
+
 
 #### Why can't I switch Weapons during Combat?
 
