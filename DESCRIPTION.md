@@ -122,7 +122,6 @@ TrinketMenu allows the player to have all available trinkets and their status in
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_trinketmenu_demo.gif)
 
-
 ### Macro Support
 
 If you prefer having certain items in your actionslots GearMenu can still be of use. By using the macro-bridge you get all the advantages of the combatQueue in a normal macro.
