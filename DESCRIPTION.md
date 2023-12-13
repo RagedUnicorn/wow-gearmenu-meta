@@ -131,23 +131,19 @@ If you prefer having certain items in your actionslots GearMenu can still be of 
 
 ##### Classic Era and Seasons
 
-```
-/run GM_AddToCombatQueue(itemId, enchantId, slotId)
+`/run GM_AddToCombatQueue(itemId, enchantId, slotId)`
 
-# Example - Equip Hand of Justice into the lower trinket slot
-/run GM_AddToCombatQueue(11815, nil, 14)
-```
+Example - Equip Hand of Justice into the lower trinket slot  
+`/run GM_AddToCombatQueue(11815, nil, 14)`
 
 **Note:** For classic era and seasons the enchantId is needed additionally for this to work. The enchantId is 
 optional. If you don't have multiple items with different enchantIds in your inventory, set it to nil.
 
 ##### Classic (Wrath of The Lich King)
-```
-/run GM_AddToCombatQueue(itemId, slotId)
+`/run GM_AddToCombatQueue(itemId, slotId)`
 
-# Example - Equip Hand of Justice into the lower trinket slot
-/run GM_AddToCombatQueue(11815, 14)
-```
+Example - Equip Hand of Justice into the lower trinket slot  
+`/run GM_AddToCombatQueue(11815, 14)`
 
 **Note:** It is not recommended using this for weapons because addons cannot switch weapons during combat (GearMenu will put the item into the combatQueue). With a normal weaponswitch macro however this is still possible.
 
