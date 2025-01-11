@@ -122,6 +122,12 @@ TrinketMenu allows the player to have all available trinkets and their status in
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_trinketmenu_demo.gif)
 
+### Season of Discovery Rune Support
+
+Gearmenu has some support for displaying active runes on items that the player is either wearing or has in his inventory. This feature can be deactivated in the options' menu.
+
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_rune_support.gif)
+
 ### Macro Support
 
 If you prefer having certain items in your actionslots GearMenu can still be of use. By using the macro-bridge you get all the advantages of the combatQueue in a normal macro.
@@ -130,13 +136,21 @@ If you prefer having certain items in your actionslots GearMenu can still be of 
 
 ##### Classic Era and Seasons
 
-`/run GM_AddToCombatQueue(itemId, enchantId, slotId)`
+```
+/run GM_AddToCombatQueue(itemId, enchantId, runeAbilityId, slotId)
+```
 
-Example - Equip Hand of Justice into the lower trinket slot  
-`/run GM_AddToCombatQueue(11815, nil, 14)`
+Example - Equip Hand of Justice into the lower trinket slot
 
-**Note:** For classic era and seasons the enchantId is needed additionally for this to work. The enchantId is 
-optional. If you don't have multiple items with different enchantIds in your inventory, set it to nil.
+```
+/run GM_AddToCombatQueue(233734, 0, 0, 11)
+```
+
+**Note:** For classic era and seasons the enchantId is needed additionally for this to work. The enchantId is
+optional. If you don't have multiple items with different enchantIds in your inventory, set it to 0.
+
+**Note:** Season of Discovery requires the runeAbilityId to be set. This affects
+classic era as well. Just set it to 0 if you don't have a runeAbilityId or you don't care about the rune(usually the case if you don't have multiple items with different runes).
 
 ##### Classic (Wrath of The Lich King)
 `/run GM_AddToCombatQueue(itemId, slotId)`
