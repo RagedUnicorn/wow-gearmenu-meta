@@ -36,19 +36,11 @@ GearMenus goal is to help the player switching between items on certain slots. O
 
 ## Issues
 
-[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/issues_classic.svg)](https://github.com/RagedUnicorn/wow-classic-gearmenu/issues) **Classic**
-
-[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/issues_bcc.svg)](https://github.com/RagedUnicorn/wow-bcc-gearmenu/issues) **Burning Crusade Classic**
-
-[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/issues_wotlkc.svg)](https://github.com/RagedUnicorn/wow-wotlkc-gearmenu/issues) **Wrath of The Lich King Classic**
+[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/issues.svg)](https://github.com/RagedUnicorn/wow-classic-gearmenu/issues)
 
 ## Source
 
-[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/source_classic.svg)](https://github.com/RagedUnicorn/wow-classic-gearmenu) **Classic**
-
-[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/source_bcc.svg)](https://github.com/RagedUnicorn/wow-bcc-gearmenu) **Burning Crusade Classic**
-
-[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/source_wotlkc.svg)](https://github.com/RagedUnicorn/wow-wotlkc-gearmenu) **Wrath of The Lich King Classic**
+[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/source.svg)](https://github.com/RagedUnicorn/wow-classic-gearmenu)
 
 ## Features of GearMenu
 
@@ -62,7 +54,7 @@ Certain items cannot be switched while the player is in combat. Weapons will be 
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_combat_queue.gif)
 
-**Note:** You can right click any slot to clear the combatqueue for that slot
+**Note:** You can right-click any slot to clear the combatqueue for that slot
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_combat_queue_cancel.gif)
 
