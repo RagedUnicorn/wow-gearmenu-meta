@@ -36,8 +36,7 @@ Upload them by hand, one at a time, in the order below.
 ![](gm_switch_items.png)
 
 ```
-Caption
-Swap the item in any equipment slot with a single click, in or out of combat — the core of GearMenu.
+Swap the item in any equipment slot with a single click, in or out of combat - the core of GearMenu.
 ```
 
 **File:** `gm_switch_items.png`
@@ -49,7 +48,6 @@ Swap the item in any equipment slot with a single click, in or out of combat —
 ![](gm_combat_queue.png)
 
 ```
-Caption
 Can't switch in combat? GearMenu queues the swap and equips it the instant you leave combat. Ideal for PvP.
 ```
 
@@ -62,8 +60,7 @@ Can't switch in combat? GearMenu queues the swap and equips it the instant you l
 ![](gm_trinket_menu.png)
 
 ```
-Caption
-TrinketMenu keeps every trinket and its cooldown in view — enable it, lock it, and set the columns and size to taste.
+TrinketMenu keeps every trinket and its cooldown in view - enable it, lock it, and set the columns and size to taste.
 ```
 
 **File:** `gm_trinket_menu.png`
@@ -75,7 +72,6 @@ TrinketMenu keeps every trinket and its cooldown in view — enable it, lock it,
 ![](gm_configuration.png)
 
 ```
-Caption
 Configure each GearBar in depth: lock it, size the slots and change menu, pick which gear slots show, and bind a key to each slot.
 ```
 
