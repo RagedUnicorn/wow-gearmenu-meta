@@ -76,3 +76,15 @@ Configure each GearBar in depth: lock it, size the slots and change menu, pick w
 ```
 
 **File:** `gm_configuration.png`
+
+---
+
+## 5. Profiles
+
+![](gm_profile_configuration.png)
+
+```
+Save your whole GearMenu setup as named profiles and switch between them - export and import as strings to share a setup with another character.
+```
+
+**File:** `gm_profile_configuration.png`
