@@ -9,6 +9,10 @@ _GearMenu aims to help the player switch between items in and out of combat. Whe
 [![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/curseforge.svg)](https://www.curseforge.com/wow/addons/gearmenu)
 [![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/wago.svg)](https://addons.wago.io/addons/gearmenu)
 
+## Source/Issues
+[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/issues.svg)](https://github.com/RagedUnicorn/wow-classic-gearmenu/issues)  
+[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/source.svg)](https://github.com/RagedUnicorn/wow-classic-gearmenu)
+
 ## What is GearMenu?
 
 GearMenu's goal is to help the player switch between items on certain slots. Often players have items such as engineering items that have a one-time use followed by a long cooldown. After using them during a fight the player wants to switch back to a more useful item. While changing items during combat is not possible (with some exceptions such as weapons) GearMenu can help with switching them as soon as possible. When a player tries to switch an item during combat it will be put into the combatqueue and switched as soon as possible. If the player leaves combat for just a split second all the items in the combatqueue will be switched. For some classes this might be even easier because they can use spells such as rogue - vanish or hunter - feign death.
@@ -35,14 +39,6 @@ GearMenu supports World of Warcraft Classic Era, TBC Anniversary and Mists of Pa
 * Secondary-hand/Off-hand slot
 * Ranged slot
 * Ammo slot
-
-## Issues
-
-[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/issues.svg)](https://github.com/RagedUnicorn/wow-classic-gearmenu/issues)
-
-## Source
-
-[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/source.svg)](https://github.com/RagedUnicorn/wow-classic-gearmenu)
 
 ## Features of GearMenu
 
