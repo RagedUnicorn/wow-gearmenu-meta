@@ -10,7 +10,7 @@ _GearMenu aims to help the player switch between items in and out of combat. Whe
 [![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/wago.svg)](https://addons.wago.io/addons/gearmenu)
 
 ## Source/Issues
-[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/issues.svg)](https://github.com/RagedUnicorn/wow-classic-gearmenu/issues)  
+[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/issues.svg)](https://github.com/RagedUnicorn/wow-classic-gearmenu/issues)
 [![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/source.svg)](https://github.com/RagedUnicorn/wow-classic-gearmenu)
 
 ## What is GearMenu?
