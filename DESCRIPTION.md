@@ -48,7 +48,7 @@ With GearMenu it is easy to switch between items in supported slots. This is esp
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_switch_items.gif)
 
 ### CombatQueue
-Certain items cannot be switched while the player is in combat. Weapons will be switched immediately whether the player is in combat or not. Other items that cannot be switched in combat will be enqueued in the combatqueue and switched as soon as possible. This is especially useful in PvP when you leave combat for a short time.
+Certain items cannot be switched while the player is in combat. While in combat all items, including weapons, are placed in the combatqueue and switched as soon as possible. This is especially useful in PvP when you leave combat for a short time.
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_combat_queue.gif)
 
@@ -56,13 +56,9 @@ Certain items cannot be switched while the player is in combat. Weapons will be 
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_combat_queue_cancel.gif)
 
-GearMenu also detects whether an itemswitch is possible even when out of combat. If you're switching an item while you're casting your mount or any other spell it will put the item in the combatqueue. As soon as the cast is over the item will be switched.
+GearMenu also detects whether an itemswitch is possible even when out of combat. If you're switching an item while you're casting your mount or any other spell it will put the item in the combatqueue. As soon as the cast is over the item will be switched. This is also the case if you cancel your cast.
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_combat_queue_cast.gif)
-
-This is also the case if you cancel your cast.
-
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_combat_queue_cast_cancel.gif)
 
 ### Quick Change
 
@@ -74,7 +70,7 @@ Quick change consists of rules that apply when certain items are used. The playe
 
 ### Keybinding
 
-GearMenu allows to keybind to every slot with a keybinding. Instead of having a keybind for every item that you have to remember you set it directly on the slot itself.
+GearMenu allows to keybind to every slot with a keybinding. Keybindings have to be set directly inside GearMenu's configuration.
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_keybinding.gif)
 
@@ -118,6 +114,8 @@ GearMenu has some support for displaying active runes on items that the player i
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_rune_support.gif)
 
+**Note:** There are some items that are buggy and will not display runes properly. This is a bug in the Blizzard API and cannot be fixed by GearMenu.
+
 ### Macro Support
 
 If you prefer having certain items in your actionslots GearMenu can still be of use. By using the macro-bridge you get all the advantages of the combatQueue in a normal macro.
@@ -131,7 +129,7 @@ If you prefer having certain items in your actionslots GearMenu can still be of 
 Example - Equip Hand of Justice into the lower trinket slot
 
 ```
-/run GM_AddToCombatQueue(233734, 0, 0, 11)
+/run GM_AddToCombatQueue(233734, 0, 0, 14)
 ```
 
 **Note:** The enchantId is optional. If you don't have multiple items with different enchantIds in your inventory, set it to 0.
@@ -145,15 +143,52 @@ Classic Era as well. Just set it to 0 if you don't have a runeAbilityId or you d
 
 `/run GM_RemoveFromCombatQueue(slotId)`
 
+Example - Clear headSlot queue
+
+`/run GM_RemoveFromCombatQueue(1)`
+
 ##### Finding itemId
 
-Finding the id of a certain item is easiest with websites such as [wowhead](https://classic.wowhead.com/ "").
+Finding the id of a certain item is easiest with websites such as [wowhead](https://classic.wowhead.com/).
+
+Example - Hand of Justice
+
+`https://classic.wowhead.com/item=11815/hand-of-justice`
+
+The number after item is the itemId we search for.
 
 ##### Finding slotId
 
 For finding the correct slotId refer to the image below. Only InventorySlotIds are valid targets for GearMenu
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_interface_slots.png)
+
+### Swap Event Notifications for AddOn Authors
+
+Third-party addons (or WeakAuras) can be notified about GearMenu's swap lifecycle. Like the macro-bridge globals above, this surface is part of GearMenu's public API contract.
+
+```lua
+local function MySwapListener(eventName, slotId, itemId)
+  -- eventName is one of "queued", "unqueued" or "completed"
+  print("GearMenu " .. eventName .. " item " .. itemId .. " in slot " .. slotId)
+end
+
+GM_RegisterSwapListener(MySwapListener)
+-- and later, if no longer interested
+GM_UnregisterSwapListener(MySwapListener)
+```
+
+The listener is invoked as `callback(eventName, slotId, itemId)`:
+
+| eventName   | Fired when                                                                          |
+|-------------|-------------------------------------------------------------------------------------|
+| `queued`    | A swap was added to the combatQueue (combat, casting or loss of control)            |
+| `unqueued`  | A queued swap was removed from the combatQueue - cleared by the user, aborted, or because the swap is about to execute |
+| `completed` | A gear swap was executed                                                            |
+
+**Note:** When a queued swap executes, `unqueued` fires directly before `completed`. A swap that never had to queue (executed immediately) fires `completed` only.
+
+**Note:** Listener errors are isolated - a failing listener never breaks the swap itself. The error is logged instead.
 
 ## Configurability
 
@@ -193,17 +228,11 @@ Whether a GearBar should be freely movable or be locked in place can be configur
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_options_lock_window.gif)
 
-#### GearSlot Size
+#### GearSlot and ChangeMenu Size
 
-Every GearBar can have a different size for its GearSlots. You could, for example, have a GearBar with very big trinkets and another with smaller slots for less important items.
+Every GearBar can have a different size for its GearSlots. You could, for example, have a GearBar with very big trinkets and another with smaller slots for less important items. The size of the ChangeMenu can be configured independently of the GearSlot size.
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_options_gearslot_size.gif)
-
-#### ChangeMenu Size
-
-The size of the ChangeMenu can be configured independently of the GearSlot size.
-
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_options_changemenu_size.gif)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_options_slot_sizes.gif)
 
 #### Orientation
 
@@ -225,7 +254,7 @@ GearMenu can show item tooltips when hovering items in its slots and change menu
 
 Enable whether an item in a Gearslot should be used when the player presses the key down (keydown) or only after the key is released (keyup).
 
-### Filter Items by Quality
+#### Filter Items by Quality
 
 Not interested in seeing items with a quality level below a certain level? Filter them out and only items that meet your set level will be considered to be displayed in GearMenu.
 
@@ -237,11 +266,11 @@ GearMenu supports two different themes for its UI elements. By default, the cust
 
 ##### Custom
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_theme_custom.jpg)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_theme_custom.png)
 
 ##### Classic
 
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_theme_classic.jpg)
+![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_theme_classic.png)
 
 ### TrinketMenu Configuration
 
@@ -268,6 +297,10 @@ A profile captures your full GearMenu setup – all of your GearBars (their Gear
 - **Rename**: Renames the selected profile.
 - **Delete**: Removes the selected profile.
 
+#### The Default Profile
+
+Every character starts with a profile named **Default**. It holds GearMenu's shipped settings and is created automatically – you never have to save it yourself. It cannot be deleted, renamed or overwritten, so there is always a clean baseline to go back to: select **Default** and click **Apply** to reset GearMenu to its factory settings. Note that this also removes all of your GearBars and QuickChange rules, exactly like a fresh install. The Rename and Delete buttons are greyed out while it is selected.
+
 #### Sharing Profiles (Export / Import)
 
 Profiles can be shared as portable strings, making it easy to copy a setup between characters or hand it to another player.
@@ -291,7 +324,7 @@ GearMenu by default filters out items that are below uncommon (green) quality. T
 
 There are certain limitations that make it harder to switch an item even if the player is out of combat. One such example is that WoW prevents switching items while the player is casting a spell. GearMenu detects this and changes the item as soon as there is a pause between two spells or if a spell was cancelled. Just keep this in mind if you absolutely need the item switch to happen as soon as possible. Another factor can be a loss of control effect such as sap, iceblock and similar effects. In such circumstances it is not possible to switch an item. GearMenu is aware of such effects on the player and will switch the item as soon as possible.
 
-If you still think you found an issue where GearMenu doesn't switch items as expected feel free to create an [issue](#Issues).
+If you still think you found an issue where GearMenu doesn't switch items as expected feel free to create an [issue](https://github.com/RagedUnicorn/wow-classic-gearmenu/issues).
 
 
 #### Why can't I switch Weapons during Combat?
