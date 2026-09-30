@@ -10,49 +10,53 @@ _GearMenu aims to help the player switch between items in and out of combat. Whe
 [![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/wago.svg)](https://addons.wago.io/addons/gearmenu)
 
 ## Source/Issues
-[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/issues.svg)](https://github.com/RagedUnicorn/wow-classic-gearmenu/issues)
-[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/source.svg)](https://github.com/RagedUnicorn/wow-classic-gearmenu)
+[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/issues.svg)](https://github.com/RagedUnicorn/wow-forever-gearmenu/issues)
+[![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/source.svg)](https://github.com/RagedUnicorn/wow-forever-gearmenu)
 
 ## What is GearMenu?
 
 GearMenu's goal is to help the player switch between items on certain slots. Often players have items such as engineering items that have a one-time use followed by a long cooldown. After using them during a fight the player wants to switch back to a more useful item. While changing items during combat is not possible (with some exceptions such as weapons) GearMenu can help with switching them as soon as possible. When a player tries to switch an item during combat it will be put into the combatqueue and switched as soon as possible. If the player leaves combat for just a split second all the items in the combatqueue will be switched. For some classes this might be even easier because they can use spells such as rogue - vanish or hunter - feign death.
 
-GearMenu supports World of Warcraft Classic Era, TBC Anniversary and Mists of Pandaria Classic, including Hardcore and Season of Discovery.
+GearMenu supports World of Warcraft: Forever.
 
 **Supported slots:**
 
-* Head/Helmet slot
-* Neck slot
-* Shoulder slot
-* Chest/Robe slot
-* Waist/Belt slot
-* Legs slot
-* Feet/Boots slot
-* Wrist/Bracers slot
-* Hands slot
-* First/Upper ring slot
-* Second/Upper ring slot
-* First/Upper trinket slot
-* Second/Lower trinket slot
-* Back/Cloak slot
-* Main-hand slot
-* Secondary-hand/Off-hand slot
-* Ranged slot
-* Ammo slot
+| Slotname          | Description                  |
+|-------------------|------------------------------|
+| HeadSlot          | Head/Helmet slot             |
+| NeckSlot          | Neck slot                    |
+| ShoulderSlot      | Shoulder slot                |
+| ChestSlot         | Chest/Robe slot              |
+| WaistSlot         | Waist/Belt slot              |
+| LegsSlot          | Legs slot                    |
+| FeetSlot          | Feet/Boots slot              |
+| WristSlot         | Wrist/Bracers slot           |
+| HandsSlot         | Hands slot                   |
+| Finger0Slot       | First/Upper Ring slot        |
+| Finger1Slot       | Second/Upper Ring slot       |
+| Trinket0Slot      | First/Upper Trinket slot     |
+| Trinket1Slot      | Second/Lower Trinket slot    |
+| BackSlot          | Back/Cloak slot              |
+| MainhandSlot      | Main-hand slot               |
+| SecondaryHandSlot | Secondary-hand/Off-hand slot |
+| RangedSlot        | Ranged slot                  |
+| AmmoSlot          | Ammo slot                    |
 
 ## Features of GearMenu
 
 ### Item switch for certain slots
+
 With GearMenu it is easy to switch between items in supported slots. This is especially useful for engineering items that you wear for a certain amount of time and then switch back to your usual gear.
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_switch_items.gif)
 
 ### CombatQueue
+
 Certain items cannot be switched while the player is in combat. While in combat all items, including weapons, are placed in the combatqueue and switched as soon as possible. This is especially useful in PvP when you leave combat for a short time.
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_combat_queue.gif)
 
-**Note:** You can right-click any slot to clear the combatqueue for that slot
+> Note: You can right-click any slot to clear the combatqueue for that slot - the slot flashes red to confirm
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_combat_queue_cancel.gif)
 
@@ -60,17 +64,16 @@ GearMenu also detects whether an itemswitch is possible even when out of combat.
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_combat_queue_cast.gif)
 
-### Quick Change
-
-Quick change consists of rules that apply when certain items are used. The player can define rules for items that have a usable effect. An item might be immediately switched after use or only after a certain delay. Otherwise, the same rules for item switching apply. This means that if the user is in combat it will be moved to the combat queue and if he is out of combat the item will be immediately switched. See the options menu for defining new rules based on the item type.
-
-**Note:** If an item has a buff effect, and you immediately change the item you will usually also lose its buff. In most cases it makes sense to set the delay to the duration of the buff
-
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_quick_change_add_rule.gif)
-
 ### Keybinding
 
-GearMenu allows to keybind to every slot with a keybinding. Keybindings have to be set directly inside GearMenu's configuration.
+Every GearSlot can be bound to a key - up to two keys per slot - through the game's own keybinding UI:
+
+- **Settings > Keybindings** lists a `GearMenu` section with an entry per GearBar and GearSlot (`GearBar 1 - Slot 3`). The `Key Bindings` button in a GearBar's configuration opens the list at that section.
+- **Quick Keybind Mode** (Settings > Keybindings > Quick Keybind Mode, or the `Quick Keybind Mode` button in a GearBar's configuration): hover a GearSlot and press the key you want to bind, Escape unbinds.
+
+The bound key is shown in the top right corner of the GearSlot like the hotkey of an action button; it turns red while the target is out of range of the item.
+
+The bound key is shown on the GearSlot and in the slot's configuration row, where `Unbind` clears it. Keys are positional - `GearBar 1 - Slot 3` is the third slot of your first GearBar - and follow a slot that moves up when a slot before it is removed. Keys cannot be changed while in combat; a change made in combat is applied as soon as you leave it.
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_keybinding.gif)
 
@@ -106,15 +109,9 @@ Enable an empty slot in the changeMenu that allows for quicker and easier unequi
 
 TrinketMenu allows the player to have all available trinkets and their status in view at all times. This makes it easier for the player to plan when to equip a trinket with a long cooldown. A left click will equip the trinket into the upper trinketslot and a right click will equip the item into the lower trinketslot.
 
+With drag and drop enabled the TrinketMenu also works in both directions: a trinket can be dragged out of the TrinketMenu and dropped onto a character trinketslot or a GearSlot to equip it, and a worn trinket can be dragged back onto the TrinketMenu to unequip it into the bags.
+
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_trinketmenu_demo.gif)
-
-### Season of Discovery Rune Support
-
-GearMenu has some support for displaying active runes on items that the player is either wearing or has in his inventory. This feature can be deactivated in the options' menu.
-
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_rune_support.gif)
-
-**Note:** There are some items that are buggy and will not display runes properly. This is a bug in the Blizzard API and cannot be fixed by GearMenu.
 
 ### Macro Support
 
@@ -123,37 +120,32 @@ If you prefer having certain items in your actionslots GearMenu can still be of 
 #### Add Item to CombatQueue
 
 ```
-/run GM_AddToCombatQueue(itemId, enchantId, runeAbilityId, slotId)
-```
+/run GM_AddToCombatQueue(itemId, enchantId, slotId)
 
-Example - Equip Hand of Justice into the lower trinket slot
-
-```
-/run GM_AddToCombatQueue(233734, 0, 0, 14)
+# Example - Equip Hand of Justice into the lower trinket slot
+/run GM_AddToCombatQueue(233734, 0, 14)
 ```
 
 **Note:** The enchantId is optional. If you don't have multiple items with different enchantIds in your inventory, set it to 0.
 
-**Note:** Season of Discovery requires the runeAbilityId to be set. This affects
-Classic Era as well. Just set it to 0 if you don't have a runeAbilityId or you don't care about the rune (usually the case if you don't have multiple items with different runes).
-
-**Note:** It is not recommended using this for weapons because addons cannot switch weapons during combat (GearMenu will put the item into the combatQueue). With a normal weaponswitch macro however this is still possible.
+> Note: It is not recommended using this for weapons because addons cannot switch weapons during combat (GearMenu will put the item into the combatQueue). With a normal weaponswitch macro however this is still possible.
 
 #### Clear Slot From CombatQueue
+```
+/run GM_RemoveFromCombatQueue(slotId)
 
-`/run GM_RemoveFromCombatQueue(slotId)`
-
-Example - Clear headSlot queue
-
-`/run GM_RemoveFromCombatQueue(1)`
+# Example - Clear headSlot queue
+/run GM_RemoveFromCombatQueue(1)
+```
 
 ##### Finding itemId
 
 Finding the id of a certain item is easiest with websites such as [wowhead](https://classic.wowhead.com/).
 
-Example - Hand of Justice
-
-`https://classic.wowhead.com/item=11815/hand-of-justice`
+```
+# Example:
+https://classic.wowhead.com/item=11815/hand-of-justice
+```
 
 The number after item is the itemId we search for.
 
@@ -210,6 +202,10 @@ Each GearBar has some configurations that can be done individually for each Gear
 
 ### Individual GearBar Configuration
 
+#### Hide/Show GearBar
+
+Each GearBar can be shown or hidden individually without deleting it, so a situational bar keeps its GearSlots and keybindings while staying off-screen. Hiding is purely visual - the keybindings of a hidden GearBar keep working. Because GearSlots are protected buttons, the visibility of a GearBar cannot be changed while in combat.
+
 #### Hide/Show Cooldowns
 
 Whether cooldowns should be shown or hidden can be configured individually for each GearBar.
@@ -260,18 +256,6 @@ Not interested in seeing items with a quality level below a certain level? Filte
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_options_filter_item_quality.gif)
 
-#### Themes
-
-GearMenu supports two different themes for its UI elements. By default, the custom theme will be used.
-
-##### Custom
-
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_theme_custom.png)
-
-##### Classic
-
-![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_theme_classic.png)
-
 ### TrinketMenu Configuration
 
 TrinketMenu supports the following configuration features.
@@ -290,12 +274,12 @@ GearMenu lets you save your entire configuration as named profiles, so you can s
 
 ![](https://raw.githubusercontent.com/RagedUnicorn/wow-gearmenu-meta/master/assets/gm_profile_configuration.png)
 
-A profile captures your full GearMenu setup – all of your GearBars (their GearSlots, sizes, orientation, lock state and on-screen position), your QuickChange rules, the TrinketMenu settings, the selected theme and the general options. One profile is always the **active** one, marked in gold as *"Raid (active)"* in the list: every change you make in the settings belongs to it, and it is saved automatically – when you switch profiles, log out or reload, export it, and at every login. There is nothing to remember to save.
+A profile captures your full GearMenu setup – all of your GearBars (their GearSlots, sizes, orientation, lock state and on-screen position), the TrinketMenu settings and the general options. One profile is always the **active** one, marked in gold as *"Raid (active)"* in the list: every change you make in the settings belongs to it, and it is saved automatically – when you switch profiles, log out or reload, export it, and at every login. There is nothing to remember to save.
 
 - **Create new Profile**: Stores a copy of your current settings under a new name and makes it the active profile.
 - **Load**: Switches to the selected profile and reloads the UI. The profile you are leaving keeps your settings as they are now.
 - **Rename** / **Delete**: Manage the selected profile. Deleting the active profile switches you back to *Default*.
-- **Reset to defaults**: Puts the active profile back to GearMenu's shipped settings – the general options, the TrinketMenu settings and the theme at their defaults, your GearBars and QuickChange rules replaced by the starter GearBar, exactly like a fresh install – then reloads the UI.
+- **Reset to defaults**: Puts the active profile back to GearMenu's shipped settings – the general options, the TrinketMenu settings at their defaults, your GearBars replaced by the starter GearBar, exactly like a fresh install – then reloads the UI.
 
 #### The Default Profile
 
@@ -324,8 +308,7 @@ GearMenu by default filters out items that are below uncommon (green) quality. T
 
 There are certain limitations that make it harder to switch an item even if the player is out of combat. One such example is that WoW prevents switching items while the player is casting a spell. GearMenu detects this and changes the item as soon as there is a pause between two spells or if a spell was cancelled. Just keep this in mind if you absolutely need the item switch to happen as soon as possible. Another factor can be a loss of control effect such as sap, iceblock and similar effects. In such circumstances it is not possible to switch an item. GearMenu is aware of such effects on the player and will switch the item as soon as possible.
 
-If you still think you found an issue where GearMenu doesn't switch items as expected feel free to create an [issue](https://github.com/RagedUnicorn/wow-classic-gearmenu/issues).
-
+If you still think you found an issue where GearMenu doesn't switch items as expected feel free to create an [issue](https://github.com/RagedUnicorn/wow-forever-gearmenu/issues).
 
 #### Why can't I switch Weapons during Combat?
 
