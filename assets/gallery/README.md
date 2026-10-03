@@ -1,7 +1,7 @@
 # Gallery Images
 
 Static overview images for the GearMenu pages on
-[wago.io](https://addons.wago.io/addons/gearmenu/gallery) and
+[wago.io](https://addons.wago.io/addons/gearmenu-rg/gallery) and
 [CurseForge](https://authors.curseforge.com/#/projects/345496/media). They give visitors a
 quick visual summary of GearMenu's core features straight from the gallery/screenshot
 strip — the full animated demos live in the project's main `README.md`, which has room
